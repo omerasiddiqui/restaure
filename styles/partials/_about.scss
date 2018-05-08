@@ -1,0 +1,23 @@
+.about {
+
+  .wrapper {
+    background: $light-color;
+    border-radius: 50px;
+    margin-top: 1%;
+  }
+  .about-heading{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    h2 {
+      font-size: 6.0rem;
+      margin: 5%;
+    }
+    p {
+      font-size: 1.6rem;
+      padding: 0 5% 5%;
+      letter-spacing: 2px;
+    }
+  }
+}
