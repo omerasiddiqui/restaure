@@ -1,3 +1,4 @@
+// Nav popout
 var $hamburger = $(".hamburger");
 
 $hamburger.on("click", function(e) {
@@ -7,10 +8,27 @@ $hamburger.on("click", function(e) {
 });
 
 ///////////////////////////////////////////////////////////////////
+// Exit overlay
 
-$('.exit').on("click",function(){
-$('.overlay').css('opacity', '0');
+const overlay = $('.overlay');
+const galleryItem = $('.gallery-item');
+const description = $('.item-description');
+
+  $('.exit').on("click",function(){
+  $(this).parent(overlay).addClass('hide');
+  $(this).parent(overlay).parent(galleryItem).find(description).toggleClass('show');
+  });
+
+
+  $('.item-description').on("click", function(){
+        $(this).toggleClass('hide');
+        $(this).toggleClass('show');
+        $(this).siblings('.overlay').removeClass('hide');
 });
+
+
+
+
 
 ////////////////////////////////////////////////////////////////////
 // Smooth scroll

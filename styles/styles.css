@@ -176,10 +176,10 @@ summary {
   max-width: 1080px; }
 
 .hide {
-  opacity: 0; }
+  opacity: 0 !important; }
 
 .show {
-  opacity: 1; }
+  opacity: 1 !important; }
 
 body {
   font-size: 62.5%;
@@ -318,7 +318,7 @@ header .header-ig {
     margin: 5%; }
   .about .about-heading p {
     font-size: 1.6rem;
-    padding: 0 5% 5%;
+    padding: 0 10% 5%;
     letter-spacing: 2px; }
 
 .gallery .wrapper {
@@ -344,15 +344,26 @@ header .header-ig {
 
 .gallery .gallery-item {
   width: 32%;
-  margin: 2% 0;
+  /* margin: 2% 0; */
   border-radius: 50px;
   position: relative;
-  -webkit-transition: all 0.8s ease;
-  -o-transition: all 0.8s ease;
-  transition: all 0.8s ease;
-  position: relative; }
-  .gallery .gallery-item a {
-    color: black; }
+  -webkit-transition: all 0.8s;
+  -o-transition: all 0.8s;
+  transition: all 0.8s;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
   .gallery .gallery-item h2 {
     font-family: "Raleway", sans-serif;
     font-size: 2.5rem;
@@ -402,3 +413,56 @@ header .header-ig {
     font-size: 1.5rem;
     padding: 15% 0;
     margin: 5% 0; }
+
+.gallery h4 {
+  text-align: center;
+  font-size: 1.0rem;
+  margin-top: 10%;
+  margin-bottom: 5%;
+  cursor: pointer;
+  text-shadow: 1px 1px 2px #007bff; }
+
+.gallery .item-description {
+  opacity: 0;
+  z-index: 20;
+  font-family: "Raleway", sans-serif;
+  padding: 10px 20px;
+  background: #baebf4;
+  border-radius: 50px;
+  display: inline-block;
+  text-align: center;
+  -webkit-box-shadow: 4px 4px 5px black;
+  box-shadow: 4px 4px 5px black;
+  -webkit-transition: backgorund 0.8s, -webkit-box-shadow 0.3s;
+  transition: backgorund 0.8s, -webkit-box-shadow 0.3s;
+  -o-transition: box-shadow 0.3s, backgorund 0.8s;
+  transition: box-shadow 0.3s, backgorund 0.8s;
+  transition: box-shadow 0.3s, backgorund 0.8s, -webkit-box-shadow 0.3s; }
+  .gallery .item-description:hover {
+    -webkit-box-shadow: 2px 2px 3px black;
+    box-shadow: 2px 2px 3px black;
+    background: #8edeed; }
+
+.gallery .exit {
+  /* text-shadow: 2px 2px 2px $secondary-color; */ }
+
+.social-media .wrapper {
+  background: #F9FBFB;
+  border-radius: 50px;
+  margin-top: 1%; }
+
+.social-media .social-media-heading {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  text-align: center; }
+  .social-media .social-media-heading h2 {
+    font-size: 6.0rem;
+    margin: 5%; }

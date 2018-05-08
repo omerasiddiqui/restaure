@@ -17,11 +17,11 @@ button,hr,input{overflow:visible}audio,canvas,progress,video{display:inline-bloc
 }
 
 .hide {
-  opacity: 0;
+  opacity: 0 !important;
 }
 
 .show {
-  opacity: 1;
+  opacity: 1 !important;
 }
 
 body {

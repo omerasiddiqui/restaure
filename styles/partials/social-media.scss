@@ -1,11 +1,11 @@
-.about {
+.social-media {
 
   .wrapper {
     background: $light-color;
     border-radius: 50px;
     margin-top: 1%;
   }
-  .about-heading{
+  .social-media-heading{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -14,10 +14,6 @@
       font-size: 6.0rem;
       margin: 5%;
     }
-    p {
-      font-size: 1.6rem;
-      padding: 0 10% 5%;
-      letter-spacing: 2px;
-    }
+
   }
 }

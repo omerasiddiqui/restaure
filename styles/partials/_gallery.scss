@@ -17,14 +17,15 @@
   }
   .gallery-item {
     width: 32%;
-    margin: 2% 0;
+    /* margin: 2% 0; */
     border-radius: 50px;
     position: relative;
-    transition: all 0.8s ease;
+    transition: all 0.8s;
     position: relative;
-    a {
-      color: black;
-    }
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     h2 {
       font-family: $body-font;
       font-size: 2.5rem;
@@ -73,4 +74,32 @@
       margin: 5% 0;
     }
   }
+  h4 {
+    text-align: center;
+    font-size: 1.0rem;
+    margin-top: 10%;
+    margin-bottom: 5%;
+    cursor: pointer;
+    text-shadow: 1px 1px 2px $secondary-color;
+  }
+  .item-description {
+    opacity: 0;
+    z-index: 20;
+    font-family: $body-font;
+    padding: 10px 20px;
+    background: $primary-color;
+    border-radius: 50px;
+    display: inline-block;
+    text-align: center;
+    box-shadow: 4px 4px 5px black;
+    transition: box-shadow 0.3s, backgorund 0.8s;
+    &:hover {
+      box-shadow: 2px 2px 3px black;
+      background: darken($primary-color, 10%)
+    }
+  }
+  .exit {
+    /* text-shadow: 2px 2px 2px $secondary-color; */
+  }
+
 }
