@@ -24,6 +24,11 @@ button,hr,input{overflow:visible}audio,canvas,progress,video{display:inline-bloc
   opacity: 1 !important;
 }
 
+.displayNone {
+  display: none;
+  opacity: 0 !important;
+}
+
 body {
   font-size: 62.5%;
   font-family: $body-font;

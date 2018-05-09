@@ -1,6 +1,7 @@
 /* fonts */
 /* colors */
 /* media breakpoints */
+@import url("https://fonts.googleapis.com/css?family=Mukta+Mahee:200,400");
 button, hr, input {
   overflow: visible; }
 
@@ -181,6 +182,10 @@ summary {
 .show {
   opacity: 1 !important; }
 
+.displayNone {
+  display: none;
+  opacity: 0 !important; }
+
 body {
   font-size: 62.5%;
   font-family: "Raleway", sans-serif;
@@ -344,7 +349,6 @@ header .header-ig {
 
 .gallery .gallery-item {
   width: 32%;
-  /* margin: 2% 0; */
   border-radius: 50px;
   position: relative;
   -webkit-transition: all 0.8s;
@@ -411,7 +415,7 @@ header .header-ig {
   padding: 5%; }
   .gallery .overlay h3 {
     font-family: "Raleway", sans-serif;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     padding: 15% 0;
     margin: 8% 0; }
 
@@ -434,15 +438,16 @@ header .header-ig {
   text-align: center;
   -webkit-box-shadow: 4px 4px 5px black;
   box-shadow: 4px 4px 5px black;
-  -webkit-transition: backgorund 0.8s, -webkit-box-shadow 0.3s;
-  transition: backgorund 0.8s, -webkit-box-shadow 0.3s;
-  -o-transition: box-shadow 0.3s, backgorund 0.8s;
-  transition: box-shadow 0.3s, backgorund 0.8s;
-  transition: box-shadow 0.3s, backgorund 0.8s, -webkit-box-shadow 0.3s; }
+  -webkit-transition: background 0.6s, color 0.8s, -webkit-box-shadow 0.3s;
+  transition: background 0.6s, color 0.8s, -webkit-box-shadow 0.3s;
+  -o-transition: box-shadow 0.3s, background 0.6s, color 0.8s;
+  transition: box-shadow 0.3s, background 0.6s, color 0.8s;
+  transition: box-shadow 0.3s, background 0.6s, color 0.8s, -webkit-box-shadow 0.3s; }
   .gallery .item-description:hover {
     -webkit-box-shadow: 2px 2px 3px black;
     box-shadow: 2px 2px 3px black;
-    background: #8edeed; }
+    background: #003166;
+    color: white; }
 
 .gallery .exit {
   /* text-shadow: 2px 2px 2px $secondary-color; */ }
@@ -467,3 +472,341 @@ header .header-ig {
   .social-media .social-media-heading h2 {
     font-size: 6.0rem;
     margin: 5%; }
+
+.container {
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1em; }
+
+#contact {
+  opacity: 0; }
+
+ul {
+  list-style: none;
+  padding: 0; }
+
+.title {
+  margin-bottom: 30px;
+  font-family: 'Great Vibes', cursive;
+  text-shadow: 2px 2px 2px black;
+  font-weight: 400;
+  font-size: 2.0rem;
+  color: black;
+  text-align: center; }
+
+.container .wrapper {
+  background: #fff;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
+  padding: 27.5px; }
+
+#contactForm {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  grid-gap: 20px;
+  grid-template-areas: 'name' 'email' 'company' 'phone' 'message'; }
+
+.required-field {
+  grid-column: 1 / 2; }
+
+.submit-button {
+  grid-column: 2 / 3; }
+
+.name-field {
+  grid-area: name;
+  grid-column: 1 / 3; }
+
+.email-field {
+  grid-area: email;
+  grid-column: 1 / 3; }
+
+.company-field {
+  grid-area: company;
+  grid-column: 1 / 3; }
+
+.phone-field {
+  grid-area: phone;
+  grid-column: 1 / 3; }
+
+.message-field {
+  grid-area: message;
+  grid-column: 1 / 3; }
+
+/* FORM STYLES */
+.contact-us {
+  margin: 0 0 30px;
+  font-family: 'Great Vibes', cursive;
+  font-weight: 400;
+  font-size: 1.8rem;
+  color: #003166;
+  text-align: center;
+  letter-spacing: 2px; }
+
+.contact form {
+  border: 0; }
+
+.contact form label {
+  display: block; }
+
+.contact form p {
+  margin: 0;
+  font-family: 'Mukta Mahee', sans-serif;
+  font-weight: 200;
+  font-size: 0.8rem;
+  color: #4a5660; }
+
+.contact form input, .contact form textarea {
+  font-family: 'Mukta Mahee', sans-serif;
+  font-weight: 200;
+  font-size: 1.0rem;
+  width: 100%;
+  padding: .4em .8em;
+  background: rgba(249, 250, 250, 0.5);
+  border: 1px solid rgba(74, 86, 96, 0.1);
+  border-radius: 2.5px;
+  outline-color: #5dc3f2;
+  margin: 1% 0; }
+
+input[name="name"], input[name="phone"] {
+  width: 50%; }
+
+.top-line {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between; }
+
+.contact form button {
+  font-family: 'Mukta Mahee', sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  color: black;
+  background: #baebf4;
+  width: 90px;
+  height: 30px;
+  border: 0;
+  border-radius: 15px;
+  -webkit-transition: background-color 0.4s ease-out;
+  -o-transition: background-color 0.4s ease-out;
+  transition: background-color 0.4s ease-out; }
+
+.submit-button {
+  -ms-flex-item-align: center;
+  align-self: center;
+  justify-self: end; }
+
+.contact form button:hover, .contact form button:focus {
+  background: #003166;
+  color: white;
+  outline: 0; }
+
+.required-field {
+  font-family: 'Mukta Mahee', sans-serif;
+  font-weight: 200;
+  font-size: 10px;
+  color: rgba(74, 86, 96, 0.75);
+  -ms-flex-item-align: center;
+  align-self: center;
+  justify-self: start;
+  padding: 3% 0; }
+
+.container span {
+  color: #007bff;
+  font-size: 0.8rem; }
+
+.alert {
+  margin-bottom: 1em;
+  padding: 10px;
+  background: #007bff;
+  font-family: 'Mukta Mahee', sans-serif;
+  font-size: 14px;
+  text-align: center;
+  color: black;
+  border-radius: 2.5px;
+  display: none; }
+
+.contact form .invalid p {
+  color: #007bff;
+  margin-bottom: 2%; }
+
+.invalid {
+  display: none; }
+
+/* LARGE SCREENS */
+@media (min-width: 500px) {
+  #contactForm {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 'name company' 'email phone' 'message message'; }
+  .name-field {
+    grid-area: name;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2; }
+  .email-field {
+    grid-area: email;
+    grid-column: 1 / 2; }
+  .company-field {
+    grid-area: company;
+    grid-column: 2 / 3; }
+  .phone-field {
+    grid-area: phone;
+    grid-column: 2 / 3; }
+  .message-field {
+    grid-area: message;
+    grid-column: 1 / 3; } }
+
+@media (max-width: 480px) {
+  #contact .wrapper {
+    width: 85%; } }
+
+.contact-main .wrapper {
+  background: #F9FBFB;
+  border-radius: 50px;
+  margin: 1% auto; }
+
+.contact-main .contact-heading {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  text-align: center; }
+  .contact-main .contact-heading h2 {
+    font-size: 7.5rem;
+    margin: 5%;
+    color: black; }
+
+#contact .container {
+  padding-bottom: 12%; }
+
+.gallery-page .wrapper {
+  background: #F9FBFB;
+  border-radius: 50px;
+  margin-top: 1%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 2%; }
+  .gallery-page .wrapper img {
+    border-radius: 25px; }
+  .gallery-page .wrapper h1 {
+    font-size: 6.0rem;
+    margin: 5%;
+    margin-bottom: 10%;
+    font-weight: normal; }
+  .gallery-page .wrapper h2 {
+    font-family: "Raleway", sans-serif;
+    font-size: 1.7rem;
+    padding: 0 10%;
+    letter-spacing: 1px;
+    line-height: 1.3;
+    font-weight: normal;
+    margin-top: 10%; }
+  .gallery-page .wrapper .gallery-image {
+    margin-bottom: 10%; }
+
+footer {
+  background: black;
+  padding: 1% 5%;
+  border-radius: 20px; }
+  footer .wrapper {
+    background: white;
+    border-radius: 20px; }
+  footer .footer-main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    text-align: center; }
+  footer .social-footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    padding: 0.5% 1%; }
+  footer .social-footer-item {
+    font-size: 2.2rem;
+    list-style: none;
+    margin: 0 1%; }
+  footer a.link {
+    color: black;
+    padding: 0 15px;
+    -webkit-transition: border-left 0.2s, border-bottom 0.4s, border-right 0.6s, border-top 0.8s, -webkit-box-shadow 0.3s;
+    transition: border-left 0.2s, border-bottom 0.4s, border-right 0.6s, border-top 0.8s, -webkit-box-shadow 0.3s;
+    -o-transition: border-left 0.2s, border-bottom 0.4s, border-right 0.6s, border-top 0.8s, box-shadow 0.3s;
+    transition: border-left 0.2s, border-bottom 0.4s, border-right 0.6s, border-top 0.8s, box-shadow 0.3s;
+    transition: border-left 0.2s, border-bottom 0.4s, border-right 0.6s, border-top 0.8s, box-shadow 0.3s, -webkit-box-shadow 0.3s; }
+    footer a.link:hover {
+      border-left: 1px solid #baebf4;
+      border-bottom: 1px solid #baebf4;
+      border-right: 1px solid #baebf4;
+      border-top: 1px solid #baebf4;
+      -webkit-box-shadow: 2px 2px 2px black;
+      box-shadow: 2px 2px 2px black; }
+  footer .copyright {
+    font-size: 1.0rem;
+    color: black;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center; }
+    footer .copyright p {
+      display: inline-block;
+      margin: 0;
+      padding: 0.5% 0; }
+  footer .logo, footer .copyright, footer .social-footer {
+    border-left: 2px solid grey;
+    width: 33.3%; }
+  footer .logo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    border-left: none;
+    padding: 0.5% 2%; }
+  footer .height {
+    font-size: 2.2rem;
+    color: white; }
+
+.back {
+  font-size: 2.2rem; }
+  .back a {
+    background: black;
+    color: white;
+    padding: 9px 12px;
+    border-radius: 50%;
+    position: fixed;
+    top: 3vh;
+    left: 5vw; }

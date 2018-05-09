@@ -15,7 +15,7 @@ const galleryItem = $('.gallery-item');
 const description = $('.item-description');
 
   $('.exit').on("click",function(){
-  $(this).parent(overlay).addClass('hide');
+  $(this).parent(overlay).addClass('displayNone');
   $(this).parent(overlay).parent(galleryItem).find(description).toggleClass('show');
   });
 
@@ -23,15 +23,23 @@ const description = $('.item-description');
   $('.item-description').on("click", function(){
         $(this).toggleClass('hide');
         $(this).toggleClass('show');
-        $(this).siblings('.overlay').removeClass('hide');
+        $(this).siblings('.overlay').removeClass('displayNone');
 });
 
+//////////////////////////////////////////////////////////////////
 
+// CONTACT ANIMATION
+let $contactForm = $('#contact');
 
+$contactForm.waypoint(function() {
+    $contactForm.addClass('animated fadeInDown show');
+  }, {
+    offset: '50%'
+  });
 
+  ////////////////////////////////////////////////////////////
 
-////////////////////////////////////////////////////////////////////
-// Smooth scroll
+// SMOOTH scroll
 
 $('nav a').smoothScroll({
   offset: 100,
