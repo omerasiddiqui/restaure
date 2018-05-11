@@ -7,7 +7,10 @@ footer {
     background: white;
     border-radius: 20px;
   }
-
+  .copyC {
+    font-weight: bold;
+    padding: 0 5%;
+  }
   .footer-main {
     display: flex;
     justify-content: space-between;
@@ -41,14 +44,18 @@ footer {
     color: black;
     display: flex;
     justify-content: center;
+    border-right: 2px solid lighten(grey, 10%);
+    border-left: 2px solid lighten(grey, 10%);
+
     p {
-      display: inline-block;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       margin: 0;
       padding: 0.5% 0;
     }
   }
   .logo, .copyright, .social-footer {
-    border-left: 2px solid grey;
     width: 33.3%;
   }
   .logo {
@@ -63,15 +70,75 @@ footer {
   }
 }
 
-.back {
-  font-size: 2.2rem;
-  a {
-    background: black;
-    color: white;
-    padding: 9px 12px;
-    border-radius: 50%;
-    position: fixed;
-    top: 3vh;
-    left: 5vw;
+/* media breakpoints */
+
+@media (max-width: $laptop ) {
+  .wrapper {
+    /* background: rebeccapurple; */
   }
+  footer {
+    .copyright {
+      font-size: 0.7rem;
+      border: none;
+    }
+    .social-footer-item {
+      font-size: 1.9rem;
+    }
+    a.link {
+      color:  black;
+      padding: 0 10px;
+      &:hover {
+        border: none;
+      }
+    }
+  }
+
+}
+
+@media (max-width: $tablet ) {
+  .wrapper {
+    /* background: seagreen; */
+  }
+  footer {
+    border-radius: 0;
+    .logo, .copyright {
+      width: 50%;
+      order: 2;
+    }
+    .logo {
+      display: none
+    }
+    .footer-main {
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    .social-footer {
+      width: 100%;
+      flex-grow: 1;
+      order: -1;
+      display: flex;
+      justify-content: space-around;
+      padding-bottom: 2%;
+    }
+    .copyright {
+      font-size: 1.0rem;
+      width: 100%;
+    }
+    .social-footer-item {
+      font-size: 2.5rem;
+      align-items: baseline;
+      padding: 1% 0 0;
+    }
+    .height {
+      display: none;
+    }
+  }
+
+}
+
+@media (max-width: $mobile ) {
+  .wrapper {
+    /* background: goldenrod; */
+  }
+
 }

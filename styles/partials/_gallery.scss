@@ -1,20 +1,22 @@
 .gallery {
-
   .wrapper {
     background: $light-color;
     border-radius: 50px;
     margin-top: 1%;
   }
-  .gallery-heading{
+
+  .gallery-heading {
     display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: center;
+
     h2 {
       font-size: 6.0rem;
       margin: 5%;
     }
   }
+
   .gallery-item {
     width: 32%;
     border-radius: 50px;
@@ -25,6 +27,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
     h2 {
       font-family: $body-font;
       font-size: 2.5rem;
@@ -32,56 +35,68 @@
       position: absolute;
       top: 0;
       right: 0;
+
       &:hover {
         color: grey;
         cursor: pointer;
       }
     }
+
     &:hover {
       flex-grow: 1;
     }
+
     &:not(:hover) {
       padding: 2%;
     }
+
     &:hover .overlay {
       opacity: 1;
     }
+
     img {
       width: 100%;
       border-radius: 50px;
     }
   }
+
   .main-gallery {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 0 2%;
-    padding-bottom: 5%;
+    padding: 0 2% 5%;
   }
+
   .overlay {
     position: absolute;
-    top: 4.5vh;
     text-align: center;
+    height: 100%;
     width: 100%;
     background: rgba(247,247,247,0.8);
     opacity: 0;
     transition: all 0.7s ease;
     padding: 5%;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     h3 {
       font-family: $body-font;
       font-size: 1.2rem;
-      padding:  15% 0;
-      margin: 8% 0;
+      margin-bottom: 23%
     }
   }
+
   h4 {
     text-align: center;
-    font-size: 1.0rem;
+    font-size: 0.7rem;
     margin-top: 10%;
     margin-bottom: 5%;
     cursor: pointer;
     text-shadow: 1px 1px 2px $secondary-color;
   }
+
   .item-description {
     opacity: 0;
     z-index: 20;
@@ -93,14 +108,68 @@
     text-align: center;
     box-shadow: 4px 4px 5px black;
     transition: box-shadow 0.3s, background 0.6s, color 0.8s;
+
     &:hover {
       box-shadow: 2px 2px 3px black;
-      background:darken($secondary-color, 30%);
+      background: darken($secondary-color, 30%);
       color: white;
     }
   }
-  .exit {
-    /* text-shadow: 2px 2px 2px $secondary-color; */
+}
+/* media breakpoints */
+@media (max-width: $laptop) {
+  .wrapper {
+    /* background: rebeccapurple; */
   }
 
+  .gallery {
+    .gallery-heading h2 {
+      font-size: 5.0rem;
+    }
+  }
+}
+@media (max-width: $tablet) {
+  .wrapper {
+    /* background: seagreen; */
+  }
+
+  .gallery {
+    .gallery-heading h2 {
+      font-size: 3.5rem;
+    }
+    .item-description {
+      display: none;
+    }
+    .view-details {
+      display: none;
+    }
+    .overlay {
+      display: none;
+    }
+    .gallery-item {
+      width: 48%;
+    }
+  }
+}
+@media (max-width: 550px) {
+  .gallery {
+    .main-gallery {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    }
+    .gallery-item {
+      width: 50%;
+    }
+  }
+}
+@media (max-width: $mobile) {
+  .wrapper {
+    /* background: goldenrod; */
+  }
+  .gallery{
+    .gallery-heading h2 {
+      font-size: 2.5rem;
+    }
+  }
 }

@@ -30,14 +30,12 @@ header {
     padding: 2% 4%;
   }
 
-
-
   .menu-inner ul {
       position: absolute;
       right: 40px;
       top: 50px;
       list-style-type: none;
-      z-index: 100;
+      /* z-index: 100; */
       display: block;
   }
 
@@ -45,7 +43,7 @@ header {
       padding: 5%;
       background: rgba(255,255,255,0.95);
       position: absolute;
-      top: 10.5vh;
+      top: 15vh;
       left: 55vw;
       font-size: 2.0rem;
       list-style-type: none;
@@ -74,8 +72,8 @@ header {
   .social {
     display: flex;
     justify-content: flex-end;
-    margin-top: 10%;
-    padding-left: 20%;
+    /* margin-top: 10%; */
+    /* padding-left: 20%; */
     svg {
       padding: 0 25%;
       font-size: 5.0rem;
@@ -106,4 +104,149 @@ header {
   justify-content: center;
   padding: 5% 0;
 }
+}
+a {
+  color: black;
+  text-shadow: 3px 3px 2px $primary-color;
+}
+
+/* media breakpoints */
+
+@media (max-width: $laptop ) {
+  body {
+    /* background: rebeccapurple; */
+  }
+  header {
+    .header-ig {
+      padding-bottom: 10%;
+    }
+    .hamburger-box {
+      left: 14vw;
+    }
+    .inner-menu-wrap {
+      font-size: 1.5rem;
+      left: 0;
+      width: 100%;
+
+    }
+    .social svg {
+      font-size: 3.5rem;
+    }
+  }
+
+}
+
+@media (max-width: $tablet ) {
+  body {
+    /* background: seagreen; */
+  }
+  .wrapper {
+    width: 80%;
+  }
+  header {
+    li {
+      padding: 0 10%;
+    }
+    .link {
+      font-size: 4.0rem;
+    }
+    .inner-menu-wrap {
+      font-size: 1.5rem;
+    }
+    .social svg {
+      font-size: 8.0rem;
+    }
+    .link::after {
+        display: none;
+    }
+    .social {
+      flex-direction: row;
+      margin-top: 0;
+      justify-content: space-around;
+    }
+    .inner-menu-wrap {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+    }
+  }
+}
+
+@media (max-width: 700px){
+  header{
+    .hamburger-box{
+      left: 10.5vw;
+    }
+    li {
+      padding: 0 10%;
+    }
+    .link {
+      font-size: 3.5rem;
+    }
+    .inner-menu-wrap {
+      font-size: 1.5rem;
+      /* left: 14vw; */
+      /* z-index: 30; */
+      /* width: 80%; */
+    }
+    .social svg {
+    font-size: 3.7rem;
+  }
+}
+}
+
+@media (max-width: 626px){
+  header {
+    .inner-menu-wrap {
+      /* left: 65vw; */
+    }
+  }
+}
+
+@media (max-width: 575px){
+  header{
+    .hamburger-box{
+      left: 7.0vw;
+    }
+    .social svg {
+      font-size: 4.5rem;
+    }
+    .inner-menu-wrap {
+      font-size: 1.5rem;
+    }
+    .link {
+      font-size: 2.5rem;
+    }
+  }
+}
+
+
+@media (max-width: $mobile ) {
+  body   {
+    /* background: goldenrod; */
+  }
+  header {
+    .header-ig {
+      padding-bottom: 11%;
+    }
+    .hamburger-box {
+      left: 6.0vw;
+    }
+    .navbar-brand {
+      font-size: 3.0rem;
+    }
+    .link {
+      font-size: 2.5rem;
+    }
+  }
+
+}
+
+@media (max-width: $iphone) {
+  header {
+    .menu-inner-wrap {
+      left: 52vw;
+    }
+  }
 }

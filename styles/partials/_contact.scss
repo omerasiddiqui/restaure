@@ -261,3 +261,44 @@ input[name="name"], input[name="phone"] {
 #contact .container {
   padding-bottom: 12%;
 }
+
+/* media breakpoints */
+
+@media (max-width: $laptop ) {
+  .wrapper {
+    /* background: rebeccapurple; */
+  }
+  .contact-main {
+    .contact-heading h2 {
+      font-size: 5.0rem;
+    }
+  }
+
+}
+
+@media (max-width: $tablet ) {
+  .wrapper {
+    /* background: seagreen; */
+  }
+  .contact-us {
+    font-size: 2.0rem;
+  }
+  .contact-main {
+    .contact-heading h2 {
+      font-size: 3.5rem;
+    }
+}
+
+}
+
+@media (max-width: $mobile ) {
+  .wrapper {
+    /* background: goldenrod; */
+  }
+  .contact-main {
+    .contact-heading h2 {
+      font-size: 2.5rem;
+    }
+  }
+
+}

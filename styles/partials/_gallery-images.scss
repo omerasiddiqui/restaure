@@ -11,10 +11,11 @@
     margin-bottom: 2%;
     img {
       border-radius: 25px;
+      width: 100%;
     }
     h1 {
       font-size: 6.0rem;
-      margin: 5%;
+      margin: 8.7% 5%;
       margin-bottom: 10%;
       font-weight: normal;
     }
@@ -31,4 +32,64 @@
       margin-bottom: 10%;
     }
   }
+}
+
+.back {
+  font-size: 2.2rem;
+  a {
+    background: black;
+    color: white;
+    padding: 9px 12px;
+    border-radius: 50%;
+    position: fixed;
+    top: 3vh;
+    left: 5vw;
+  }
+}
+
+/* media breakpoints */
+
+@media (max-width: $laptop ) {
+  .wrapper {
+    /* background: rebeccapurple; */
+  }
+
+
+}
+
+@media (max-width: $tablet ) {
+  .wrapper {
+    /* background: seagreen; */
+  }
+  .gallery-page {
+    .wrapper {
+      h1 {
+        font-size: 3.0rem;
+      }
+      h2 {
+        font-size: 1.5rem;
+        padding: 0;
+      }
+    }
+  }
+
+}
+.back a {
+  padding: 3px 4px;
+  left: 2vw;
+}
+
+@media (max-width: $mobile ) {
+  .wrapper {
+    /* background: goldenrod; */
+  }
+  .back a {
+    font-size: 1.5rem;
+  }
+  .gallery-page {
+    .wrapper h2 {
+      font-size: 1.0rem;
+    }
+  }
+
 }

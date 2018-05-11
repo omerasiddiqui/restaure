@@ -32,7 +32,7 @@ const description = $('.item-description');
 let $contactForm = $('#contact');
 
 $contactForm.waypoint(function() {
-    $contactForm.addClass('animated fadeInDown show');
+    $contactForm.addClass('animated zoomInDown show');
   }, {
     offset: '50%'
   });
@@ -42,6 +42,8 @@ $contactForm.waypoint(function() {
 // SMOOTH scroll
 
 $('nav a').smoothScroll({
-  offset: 100,
+  offset: -17,
   speed: 1000
 });
+
+//////////////////////////////////////////////////////////////////
